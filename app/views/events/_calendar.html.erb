@@ -1,0 +1,17 @@
+<%= month_calendar(events: @events, attribute: :start_date) do |date, events| %>
+  <div class="calendar-cell">
+    <%= form_with url: timeline_events_path, method: :get, data: { turbo_stream: true, turbo_frame: "event_timeline" } do %>
+      <%= hidden_field_tag :selected_date, date %>
+      
+      <button type="submit" 
+              class="calendar-date <%= 'has-events' if events.any? %>"
+              data-controller="calendar"
+              data-action="click->calendar#selectDate">
+        <%= date.day %>
+        <% if events.any? %>
+          <div class="exam-indicator"></div>
+        <% end %>
+      </button>
+    <% end %>
+  </div>
+<% end %>

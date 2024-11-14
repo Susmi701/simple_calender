@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Events</h1>
+
+<div id="events">
+  <% @events.each do |event| %>
+    <%= render event %>
+    <p>
+      <%= link_to "Show this event", event %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New event", new_event_path %>
+<div class="col-md-4">
+  <div class="calendar">
+    <%= turbo_frame_tag "calendar" do %>
+      <%= render partial: "calendar" %>
+    <% end %>
+    <%= turbo_frame_tag "event_timeline" do %>
+      <%= render partial: "timeline", locals: { daily_events: @daily_events } %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,145 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap";
+ @import "simple_calendar";
+ 
+ /* Calendar Table */
+.simple-calendar .table {
+    width: 40%;
+    border-collapse: separate;
+    border-spacing: 4px;
+  }
+  
+  /* Calendar Headers */
+  .simple-calendar .table th {
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #4b5563;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+  }
+  
+  /* Calendar Days */
+  .simple-calendar .table td {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    height: 50px;
+    vertical-align: top;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Calendar Header */
+  .calendar-heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-heading a {
+    text-decoration: none;
+    color: #3b82f6;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+  
+  .calendar-heading a:hover {
+    background-color: #eff6ff;
+  }
+  
+  .calendar-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  /* Timeline Section */
+  .timeline-section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  
+  /* Calendar Date Button */
+  .calendar-date {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: #4b5563;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .calendar-date:hover {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    transform: scale(1.1);
+  }
+  
+  .has-exams {
+    color: #4f46e5;
+    font-weight: 600;
+  }
+  /* Today's Date */
+  .today .calendar-date {
+    background-color: #4f46e5;
+    color: white;
+  }
+  
+  .today .calendar-date:hover {
+    background-color: #4338ca;
+  }
+  
+  .exam-indicator {
+    width: 6px;
+    height: 6px;
+    background-color: #4f46e5;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .simple-calendar .table td {
+      height: 80px;
+      padding: 4px;
+    }
+    
+    .calendar-date {
+      width: 28px;
+      height: 28px;
+      font-size: 0.875rem;
+    }
+  }
