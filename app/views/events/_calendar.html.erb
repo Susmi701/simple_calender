@@ -4,9 +4,10 @@
       <%= hidden_field_tag :selected_date, date %>
       
       <button type="submit" 
-              class="calendar-date <%= 'has-events' if events.any? %>"
+              class="calendar-date <%= 'has-events' if events.any? %> <%= 'active' if date == @selected_date %>"
               data-controller="calendar"
-              data-action="click->calendar#selectDate">
+              data-action="click->calendar#selectDate"
+              data-calendar-target="dateButton">
         <%= date.day %>
         <% if events.any? %>
           <div class="exam-indicator"></div>

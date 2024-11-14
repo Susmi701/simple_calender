@@ -69,3 +69,4 @@ gem "simple_calendar"
 gem "bootstrap"
 gem "sassc-rails"
 gem 'rails-i18n'
+gem 'font-awesome-rails'

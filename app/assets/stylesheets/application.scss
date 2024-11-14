@@ -18,7 +18,6 @@
  
  /* Calendar Table */
 .simple-calendar .table {
-    width: 40%;
     border-collapse: separate;
     border-spacing: 4px;
   }
@@ -95,6 +94,11 @@
     justify-content: center;
   }
   
+  .calendar-date.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+  }
   .calendar-date:hover {
     background-color: #e0e7ff;
     color: #4f46e5;
@@ -105,15 +109,7 @@
     color: #4f46e5;
     font-weight: 600;
   }
-  /* Today's Date */
-  .today .calendar-date {
-    background-color: #4f46e5;
-    color: white;
-  }
   
-  .today .calendar-date:hover {
-    background-color: #4338ca;
-  }
   
   .exam-indicator {
     width: 6px;
@@ -121,12 +117,11 @@
     background-color: #4f46e5;
     border-radius: 50%;
     position: absolute;
-    bottom: 4px;
+    bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .container {
       padding: 10px;

@@ -1,18 +1,9 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Events</h1>
 
-<div id="events">
-  <% @events.each do |event| %>
-    <%= render event %>
-    <p>
-      <%= link_to "Show this event", event %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New event", new_event_path %>
-<div class="col-md-4">
+<%= link_to new_event_path, class: "btn btn-primary " do %>
+  <i class="fas fa-plus"></i> Add Event
+<% end %>
+<div class="col-md-6 p-5">
   <div class="calendar">
     <%= turbo_frame_tag "calendar" do %>
       <%= render partial: "calendar" %>
