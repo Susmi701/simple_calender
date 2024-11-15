@@ -7,7 +7,7 @@ This Rails 7 project integrates an interactive calendar that highlights upcoming
 **Active Date Highlighting:** The selected date is visually highlighted using Stimulus, enhancing navigation within the calendar.<br />
 
 ## Built With<br />
-Ruby on Rails 7 - Web application framework<br />
-Simple Calendar - Calendar library for Rails<br />
-Turbo - Enables dynamic, no-reload updates to the page<br />
-Stimulus - JavaScript framework for adding interactivity<br />
+**Ruby on Rails 7** - Web application framework<br />
+**Simple Calendar** - Calendar library for Rails<br />
+**Turbo** - Enables dynamic, no-reload updates to the page<br />
+**Stimulus** - JavaScript framework for adding interactivity<br />
