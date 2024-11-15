@@ -1,5 +1,5 @@
 <div class="timeline bg-light p-4 rounded shadow-sm">
-  <h2 class="text-left mb-4">Today's events</h2>
+  <h2 class="text-left mb-4"><%= @date %></h2>
   <% if @daily_events.present? %>
     <% @daily_events.each do |event| %>
       <div class="event-item mb-4 p-3 border-left border-primary rounded bg-white shadow-sm">
