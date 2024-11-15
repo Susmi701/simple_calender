@@ -1,4 +1,4 @@
-# Events Calendar with Simple Calendar, Turbo, and Stimulus<br />
+# Events Calendar with Simple Calendar, Turbo, and Stimulus in Rails 7<br />
 This Rails 7 project integrates an interactive calendar that highlights upcoming events using the simple_calendar gem. When a date is selected, a timeline of events for that date is displayed dynamically, without reloading the entire page. Turbo and Stimulus are used to enhance the user experience by making the selected date active and updating content in real-time.<br />
 
 ## Features<br />
