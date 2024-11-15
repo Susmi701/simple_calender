@@ -1,24 +1,13 @@
-# README
+Events Calendar with Simple Calendar, Turbo, and Stimulus
+This Rails 7 project integrates an interactive calendar that highlights upcoming events using the simple_calendar gem. When a date is selected, a timeline of events for that date is displayed dynamically, without reloading the entire page. Turbo and Stimulus are used to enhance the user experience by making the selected date active and updating content in real-time.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Features
+Interactive Calendar: Displays a monthly view of upcoming events, highlighting specific dates with scheduled events.
+Dynamic Event Loading: Selecting a date dynamically loads a timeline of events for that day without refreshing the page, powered by Turbo.
+Active Date Highlighting: The selected date is visually highlighted using Stimulus, enhancing navigation within the calendar.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Built With
+Ruby on Rails 7 - Web application framework
+Simple Calendar - Calendar library for Rails
+Turbo - Enables dynamic, no-reload updates to the page
+Stimulus - JavaScript framework for adding interactivity
